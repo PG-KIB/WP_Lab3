@@ -7,7 +7,7 @@ int main(void) {
     int indeks;
 
     // -----------------------------
-    // Krok 1: Wczytanie i wyświetlenie studentów z nieparzystym indeksem
+    // Krok 1: Wczytanie danych
     // -----------------------------
     fp = fopen(/* ??? */);
     if (!fp) {
@@ -15,23 +15,19 @@ int main(void) {
         return 1;
     }
 
-    printf("Studenci z nieparzystym indeksem:\n");
-    while (fscanf(fp, "%s %d", nazwisko, &indeks) == 2) {
-        if (/* ??? */) {
-            printf("%s %d\n", nazwisko, indeks);
-        }
-    }
-
     fclose(fp);
 
     // -----------------------------
     // Kolejne zadania do wykonania:
     // -----------------------------
-    // 1. Wczytaj wszystkie indeksy studentów do tablicy 'indeksy[MAX]'.
-    // 2. Oblicz średnią wartości indeksów i wypisz indeksy większe od średniej.
-    // 3. Wczytaj dane z pliku 'egzamin.txt'.
-    // 4. Na podstawie punktów oblicz oceny (np. >90% = 5, >75% = 4, >50% = 3, reszta 2).
-    // 5. Zapisz wyniki do pliku 'wyniki.txt' w formacie: numer indeksu i ocena.
+    // 1. Wczytaj wszystkie indeksy studentów do tablicy 'indeksy[MAX]',
+    //    oblicz ich średnią i wypisz indeksy większe od średniej.
+    // 2. Wczytaj dane z pliku 'egzamin.txt' do tablicy 'int wyniki[MAX][2]'
+    //    (kolumna 0 - numer indeksu, kolumna 1 - punkty). Napisz funkcję
+    //    'int najlepszy(int tab[][2], int n)', która zwraca numer wiersza
+    //    studenta z największą liczbą punktów, i wypisz jego numer indeksu.
+    // 3. Zapisz do pliku 'zdali.txt' indeksy i punkty studentów, którzy mają
+    //    więcej niż 50 pkt, a na końcu pliku ich liczbę.
 
     return 0;
 }
